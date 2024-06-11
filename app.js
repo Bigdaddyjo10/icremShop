@@ -13,12 +13,12 @@ const iceCream = [{
     price: 1.25,
     quantity: 0
     // @ts-ignore
-}],
+}]
 
 const toppings = [{
     name: 'Sprinkles',
-    quantity: 0,
-    price: .25
+    price: .25,
+    quantity: 0
 },
 {
     name: 'Chocolate Chips',
@@ -31,6 +31,19 @@ const toppings = [{
     quantity: 0
 }]
 
-function addSprinkles() {
-    console.log("🧁🧁");
+
+function addToppers(topItem) {
+    for (let i = 0; i < topItem.length; i++) {
+        console.log(toppings[i].name)
+        console.log(toppings[i].quantity += 1);
+        console.log(toppings[i].price * toppings[i].quantity);
+        if (topItem == toppings[i].name) {
+            return
+        }
+    }
+}
+
+function drawOrder() {
+    const oder = document.getElementById('order');
+
 }

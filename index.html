@@ -11,7 +11,7 @@
     <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js" defer></script>
     <script src="app.js" defer></script>
 </head>
-<body class="debug">
+<body>
     <header class="container-fuild d-flex justify-content-center align-items-end">
         <div class="col">
             <p class="text-center">Welcome to the shop!</p>
@@ -29,12 +29,10 @@
                     <p>Each</p>
                     <p>Total</p>
                 </div>
+                <div id="order"> </div>
             </div>
             <div class="container-fuild">
-                <div class="row">
-                    <p>Lorem ipsum dolor sit.</p>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                <div id="orderList" class="row">
                 </div>
             </div>
         </div>
@@ -43,12 +41,13 @@
             <div class="row">
                 <div class="container p-4">
                     <div class="row d-flex justify-content-around align-items-center">
+                        <p>Toppings</p>
                         <div class="col-3">
                             <div class="card-body d-flex justify-content-center ">
                                 <img class="img img-fluid " src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                             </div>
                             <div class="btn btn-fuild">
-                                <button onclick="addSprinkles()">add $$</button>
+                                <button onclick="addToppers('Sprinkles')">add $$</button>
                             </div>
                         </div>
                             <div class="col-3">
@@ -56,7 +55,7 @@
                                     <img class="img img-fluid" src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                                 </div>
                                 <div class="btn btn-fuild">
-                                <button>add $$</button>
+                                <button onclick="addToppers('Chocolate Chips')">add $$</button>
                             </div>
                             </div>
                         <div class="col-3">
@@ -64,7 +63,7 @@
                                 <img class="img img-fluid" src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                             </div>
                             <div class="btn btn-fuild">
-                                <button>add $$</button>
+                                <button onclick="addToppers('Cookie Chunks')">add $$</button>
                             </div>
                         </div>
                     </div>
