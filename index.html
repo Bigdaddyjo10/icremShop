@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
-    <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js" defer></script>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <!-- <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js" defer></script> -->
     <script src="app.js" defer></script>
 </head>
 <body>
@@ -25,7 +24,7 @@
                     <div class="d-flex justify-content-start">
                         <p>Name</p>
                     </div>
-                    <p>Qty</p>
+                    <p class="justify-content-center">Qty</p>
                     <p>Each</p>
                     <p>Total</p>
                 </div>
@@ -44,7 +43,7 @@
                         <p>Toppings</p>
                         <div class="col-3">
                             <div class="card-body d-flex justify-content-center ">
-                                <img class="img img-fluid " src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                             </div>
                             <div class="btn btn-fuild">
                                 <button onclick="addToppers('Sprinkles')">add $$</button>
@@ -52,7 +51,7 @@
                         </div>
                             <div class="col-3">
                                 <div class="card-body d-flex justify-content-center" >
-                                    <img class="img img-fluid" src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                    <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                                 </div>
                                 <div class="btn btn-fuild">
                                 <button onclick="addToppers('Chocolate Chips')">add $$</button>
@@ -60,10 +59,39 @@
                             </div>
                         <div class="col-3">
                             <div class="card-body d-flex justify-content-center">
-                                <img class="img img-fluid" src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                             </div>
                             <div class="btn btn-fuild">
                                 <button onclick="addToppers('Cookie Chunks')">add $$</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container p-4">
+                    <div class="row d-flex justify-content-around align-items-center">
+                        <p>Toppings</p>
+                        <div class="col-3">
+                            <div class="card-body d-flex justify-content-center ">
+                                <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                            </div>
+                            <div class="btn btn-fuild">
+                                <button onclick="addIceCream('Cookie Dough')">add $$</button>
+                            </div>
+                        </div>
+                            <div class="col-3">
+                                <div class="card-body d-flex justify-content-center" >
+                                    <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                </div>
+                                <div class="btn btn-fuild">
+                                <button onclick="addIceCream('Vanilla')">add $$</button>
+                            </div>
+                            </div>
+                        <div class="col-3">
+                            <div class="card-body d-flex justify-content-center">
+                                <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Description">
+                            </div>
+                            <div class="btn btn-fuild">
+                                <button onclick="addIceCream('Strawberry')">add $$</button>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,5 @@
+
+
 const iceCream = [{
     name: 'Cookie Dough',
     price: 1.25,
@@ -33,17 +35,37 @@ const toppings = [{
 
 
 function addToppers(topItem) {
-    for (let i = 0; i < topItem.length; i++) {
-        console.log(toppings[i].name)
-        console.log(toppings[i].quantity += 1);
-        console.log(toppings[i].price * toppings[i].quantity);
+    for (let i = 0; i < toppings.length; i++) {
         if (topItem == toppings[i].name) {
-            return
+            toppings[i].quantity += 1;
+
         }
     }
+    //  drawOrder()
+}
+function addIceCream(flavor) {
+    for (let i = 0; i < iceCream.length; i++) {
+        if (flavor == iceCream[i].name) {
+            iceCream[i].quantity += 1;
+        }
+
+    }
+    drawOrder()
 }
 
-function drawOrder() {
-    const oder = document.getElementById('order');
 
+function drawOrder() {
+
+    let orderContent = ''
+    const oder = document.getElementById('order');
+    const oderList = document.getElementById('');
+
+    for (let i = 0; i < iceCream.length; i++) {
+        const item = iceCream[i]
+        // console.log(`- ${item.name} x${item.quantity} $${item.price * item.quantity}`);
+        if (item.quantity > 0) {
+            orderContent += `<p class="mb-1 fw-bold"><i class="mdi mdi-ice-cream"></i> ${item.name} x${item.quantity} $${(item.price * item.quantity).toFixed(2)}</p>`
+        }
+    }
+    oder.innerHTML = orderContent
 }
