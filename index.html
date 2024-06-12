@@ -10,17 +10,16 @@
     <!-- <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js" defer></script> -->
     <script src="app.js" defer></script>
 </head>
-<body>
+<body class="bg-dark-subtle">
     <header class="container-fuild d-flex justify-content-center align-items-end">
         <div class="col">
             <p class="text-center">Welcome to the shop!</p>
-            <button onclick="checkOut()" class="btn bg-success">Check Out</button>
         </div>
       </div>
     </header>
-    <main class="container d-flex">
+    <main class="container d-flex bg-light-subtle">
         <div class="col-6">
-            <div class="row">
+            <div class="row border border-2">
                 <div class="d-flex justify-content-around">
                     <div class="d-flex justify-content-start">
                         <p>Name</p>
@@ -29,72 +28,84 @@
                     <p>Each</p>
                     <p>Total</p>
                 </div>
-                <div id="flavors"> </div>
-                <div id="toppings"> </div>
-
+                <div class="border border-1">
+                    <div class="d-block justify-content-center" id="flavors"> </div>
+                    <div class="d-block align-content-center m-2" id="toppings"> </div>
+                </div>
             </div>
+
             <div class="container-fuild">
                 <div id="orderList" class="row">
                 </div>
             </div>
+             <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex justify-content-end">
+                            <button onclick="checkOut()" class="btn bg-success">Check Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
         <!-- ANCHOR toppiings -->
         <div class="col-6">
             <div class="row">
-                <div class="container p-4">
+                <div class="container p-4 bg-warning-subtle">
                     <div class="row d-flex justify-content-around align-items-center">
-                        <p>Toppings</p>
+                        <p>Toppers</p>
                         <div class="col-3">
                             <div class="card-body d-flex justify-content-center ">
                                 <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                             </div>
                             <div class="btn btn-fuild">
-                                <button onclick="addToppers('Sprinkles')">add $$</button>
+                                <button class="btn btn-dark rounded-4" onclick="addToppers('Sprinkles')">add $$</button>
                             </div>
                         </div>
                             <div class="col-3">
                                 <div class="card-body d-flex justify-content-center" >
-                                    <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                    <img src="https://images.unsplash.com/photo-1585503100597-d70e5dc45d81?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                                 </div>
                                 <div class="btn btn-fuild">
-                                <button onclick="addToppers('Chocolate Chips')">add $$</button>
+                                <button class="btn btn-dark rounded-4" onclick="addToppers('Chocolate Chips')">add $$</button>
                             </div>
                             </div>
                         <div class="col-3">
                             <div class="card-body d-flex justify-content-center">
-                                <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                <img src="https://media.istockphoto.com/id/885134872/photo/broken-homemade-cookies-on-white-background.jpg?s=1024x1024&w=is&k=20&c=KBZ2c2znFlN9iJ5RkBUJ8wUh2RJhsB9cPyE4tK2JhzU=" alt="">
                             </div>
                             <div class="btn btn-fuild">
-                                <button onclick="addToppers('Cookie Chunks')">add $$</button>
+                                <button class="btn btn-dark rounded-4" onclick="addToppers('Cookie Chunks')">add $$</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="container p-4">
+                <div class="container p-4 bg-warning-subtle">
                     <div class="row d-flex justify-content-around align-items-center">
-                        <p>Toppings</p>
+                        <p>Flavors</p>
                         <div class="col-3">
                             <div class="card-body d-flex justify-content-center ">
-                                <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                <img src="https://media.istockphoto.com/id/1413617887/photo/ice-cream-background-material-ice-cream-with-chocolate-chips.jpg?s=1024x1024&w=is&k=20&c=wn8Sup0YHhvc4Aw34twFhLrz5yQAQyxgdUx4Tu7f5tA=" alt="">
                             </div>
                             <div class="btn btn-fuild">
-                                <button onclick="addIceCream('Cookie Dough')">add $$</button>
+                                <button class="btn btn-dark rounded-4" onclick="addIceCream('Cookie Dough')">add $$</button>
                             </div>
                         </div>
                             <div class="col-3">
                                 <div class="card-body d-flex justify-content-center" >
-                                    <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                    <img src="https://media.istockphoto.com/id/948032164/photo/ice-cream.jpg?s=1024x1024&w=is&k=20&c=WM5fpURKcn1QKNM3vFKCELrjp0aj1qctMQe123-9xAU=" alt="">
                                 </div>
                                 <div class="btn btn-fuild">
-                                <button onclick="addIceCream('Vanilla')">add $$</button>
+                                <button class="btn btn-dark rounded-4" onclick="addIceCream('Vanilla')">add $$</button>
                             </div>
                             </div>
                         <div class="col-3">
                             <div class="card-body d-flex justify-content-center">
-                                <img src="https://images.unsplash.com/photo-1516746924755-babd21844370?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Description">
+                                <img src="https://media.istockphoto.com/id/1413060865/photo/strawberry-ice-cream-with-scoop-in-freezer.jpg?s=1024x1024&w=is&k=20&c=Kv3rURuyMpVkxM1kCtmJn2-7h99-qhejluXGBFn6nA4=" alt="Description">
                             </div>
                             <div class="btn btn-fuild">
-                                <button onclick="addIceCream('Strawberry')">add $$</button>
+                                <button class="btn btn-dark rounded-4" onclick="addIceCream('Strawberry')">add $$</button>
                             </div>
                         </div>
                     </div>
@@ -102,6 +113,7 @@
             </div>
         </div>
         </main>
-        <footer></footer>
+        <footer>
+        </footer>
     </body>
     </html>
