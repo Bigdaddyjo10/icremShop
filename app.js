@@ -109,13 +109,12 @@ function addTotal() {
         if (toppingItems.quantity > 0) {
             console.log(`$${toppingItems.total}`)
         }
+    }
+    for (let i = 0; i < iceCream.length; i++) {
+        const item = iceCream[i]
+        if (item.quantity > 0) {
+            console.log(`$${item.total}`)
 
-        for (let i = 0; i < iceCream.length; i++) {
-            const item = iceCream[i]
-            if (item.quantity > 0) {
-                console.log(`$${item.total}`)
-            }
-            console.log(`${item.total}  ${toppingItems.total}`)
         }
     }
 }
