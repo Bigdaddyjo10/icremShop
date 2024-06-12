@@ -57,9 +57,10 @@ function drawToppers() {
     for (let i = 0; i < toppings.length; i++) {
         const item = toppings[i]
         if (item.quantity > 0) {
-            orderTopping += `<p class="mb-1 fw-bold"><i class="mdi mdi-ice-cream"></i> ${item.name} x${item.quantity} $${(item.price * item.quantity).toFixed(2)}</p>`
+            item.total = item.price * item.quantity
+            orderTopping += `<p class="mb-1 fw-bold"><i class="mdi mdi-ice-cream"></i> ${item.name} x${item.quantity} $${item.price} $${(item.total).toFixed(2)}</p>`
         }
-    }
+    } addTotal()
     oderList.innerHTML = orderTopping
 }
 function addIceCream(flavor) {
@@ -79,10 +80,12 @@ function drawIceCream() {
     for (let i = 0; i < iceCream.length; i++) {
         const iceCF = iceCream[i]
         if (iceCF.quantity > 0) {
-            orderFlavors += `<p class="mb-1 fw-bold"><i class="mdi mdi-ice-cream"></i> ${iceCF.name} ${iceCF.quantity} $${(iceCF.price * iceCF.quantity).toFixed(2)}</p>`
+            iceCF.total = iceCF.price * iceCF.quantity
+            orderFlavors += `<p class="mb-1 fw-bold"><i class="mdi mdi-ice-cream"></i> ${iceCF.name} ${iceCF.quantity} $${iceCF.price} $${(iceCF.total).toFixed(2)}</p>`
         }
     }
     oder.innerHTML = orderFlavors
+    addTotal()
 }
 
 function checkOut() {
@@ -94,4 +97,25 @@ function checkOut() {
     }
     drawIceCream()
     drawToppers()
+}
+
+// console.log(`- ${menu[0].name} x${menu[0].quantity} $${menu[0].price * menu[0].quantity}`);
+
+function addTotal() {
+    const totalPrice = document.getElementById("total")
+
+    for (let i = 0; i < toppings.length; i++) {
+        const toppingItems = toppings[i]
+        if (toppingItems.quantity > 0) {
+            console.log(`$${toppingItems.total}`)
+        }
+
+        for (let i = 0; i < iceCream.length; i++) {
+            const item = iceCream[i]
+            if (item.quantity > 0) {
+                console.log(`$${item.total}`)
+            }
+            console.log(`${item.total}  ${toppingItems.total}`)
+        }
+    }
 }
